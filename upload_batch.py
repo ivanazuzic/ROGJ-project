@@ -10,7 +10,7 @@ if no_args >= 2:
 else:
     BATCH_NO = 1 
 
-BATCH_SIZE = 2
+BATCH_SIZE = 1000
 GOOGLE_SPEECH_API_KEY = None
 
 path_wav = "../VEPRAD/Wav/"
@@ -44,14 +44,22 @@ def get_single_file_output(path_to_wav, filename, output_path, output_filename):
     audio_file = sr.AudioFile(path_to_wav + filename)
     with audio_file as source:
         audio_data = recognizer.record(source)
-    text = recognizer.recognize_google(
-        audio_data, 
-        key=GOOGLE_SPEECH_API_KEY, 
-        language="hr-HR"
-    )
-    with open(output_path + output_filename, 'w') as output_file:
-        output_file.write(text)
-    print(text)
+        try:
+            text = recognizer.recognize_google(
+                audio_data, 
+                key=GOOGLE_SPEECH_API_KEY, 
+                language="hr-HR"
+            )
+            with open(output_path + output_filename, 'w') as output_file:
+                output_file.write(text)
+            print(filename)
+            print(text)
+        except sr.UnknownValueError:
+            print("Google could not understand audio: UnknownValueError")
+            with open(output_path + output_filename, 'w') as output_file:
+                output_file.write("UnknownValueError")
+        except sr.RequestError as e:
+            print("Google error: RequestError; {0}".format(e))
 
 wav_names = get_wav_list()
 curr_batch = select_batch(wav_names, BATCH_NO, BATCH_SIZE)
