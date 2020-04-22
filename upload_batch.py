@@ -3,6 +3,8 @@
 import sys
 
 import speech_recognition as sr
+#dodala
+import jiwer
 
 no_args = len(sys.argv)
 if no_args >= 2:
@@ -10,7 +12,7 @@ if no_args >= 2:
 else:
     BATCH_NO = 1 
 
-BATCH_SIZE = 1000
+BATCH_SIZE = 10
 GOOGLE_SPEECH_API_KEY = None
 
 path_wav = "../VEPRAD/Wav/"
@@ -26,6 +28,15 @@ def get_wav_list():
             names_list.append(wav_name)
     return names_list
 
+#dodala
+#Load the names of paired txt files
+def get_txt_list():
+    names_list = []
+    with open('paired_files.txt', 'r') as input_file:
+        for row in input_file:
+            txt_name = row.split()[1]
+            names_list.append(txt_name)
+    return names_list
 # Selects a batch that we want to upload
 def select_batch(names_list, batch_no, batch_size):
     b_start = (batch_no - 1) * batch_size
@@ -50,8 +61,8 @@ def get_single_file_output(path_to_wav, filename, output_path, output_filename):
                 key=GOOGLE_SPEECH_API_KEY, 
                 language="hr-HR"
             )
-            with open(output_path + output_filename, 'w') as output_file:
-                output_file.write(text)
+            with open(output_path + output_filename, 'wb') as output_file:#stavila b jer u pythonu3 treba biti
+                output_file.write(text.encode('utf-8'))
             print(filename)
             print(text)
         except sr.UnknownValueError:
@@ -60,8 +71,30 @@ def get_single_file_output(path_to_wav, filename, output_path, output_filename):
                 output_file.write("UnknownValueError")
         except sr.RequestError as e:
             print("Google error: RequestError; {0}".format(e))
+            
+#dodala
+#To get rid of unnecessary symbols and replace some of them
+def get_paired_text_corrected(batch):
+    sentences=list()
+    for filename in batch:
+        with open(path_txt+filename,"r") as f:
+            
+               sentence=jiwer.RemoveKaldiNonWords()(f.read())   
+               sentences.append(sentence)
+               print(sentence)
+               print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentence))
+               
+               #sentences = ["is the world doomed or loved?", "edibles are allegedly cultivated"]
+               #print(jiwer.SubstituteRegexes({r"t": r"ć"})(sentences))
+    print(sentences)
+    print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentences))
 
+   
+               
 wav_names = get_wav_list()
-curr_batch = select_batch(wav_names, BATCH_NO, BATCH_SIZE)
-get_output_for_batch(curr_batch, path_output)
+txt_names = get_txt_list()
 
+curr_batch = select_batch(wav_names, BATCH_NO, BATCH_SIZE)
+curr_batch_txt=select_batch(txt_names, BATCH_NO, BATCH_SIZE)
+
+get_paired_text_corrected(curr_batch_txt)
