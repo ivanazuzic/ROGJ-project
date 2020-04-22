@@ -12,7 +12,7 @@ if no_args >= 2:
 else:
     BATCH_NO = 1 
 
-BATCH_SIZE = 10
+BATCH_SIZE = 100
 GOOGLE_SPEECH_API_KEY = None
 
 path_wav = "../VEPRAD/Wav/"
@@ -81,13 +81,13 @@ def get_paired_text_corrected(batch):
             
                sentence=jiwer.RemoveKaldiNonWords()(f.read())   
                sentences.append(sentence)
-               print(sentence)
-               print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentence))
+               #print(sentence)
+               #print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentence))
                
                #sentences = ["is the world doomed or loved?", "edibles are allegedly cultivated"]
                #print(jiwer.SubstituteRegexes({r"t": r"ć"})(sentences))
     print(sentences)
-    print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentences))
+    print(jiwer.SubstituteRegexes({r"{": r"š",r"`":r"ž",r"}":r"đ",r"~":r"č",r"#":r"dž"})(sentences))
 
    
                
