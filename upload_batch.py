@@ -12,7 +12,7 @@ if no_args >= 2:
 else:
     BATCH_NO = 1 
 
-BATCH_SIZE = 100
+BATCH_SIZE = 10
 GOOGLE_SPEECH_API_KEY = None
 
 path_wav = "../VEPRAD/Wav/"
@@ -80,14 +80,16 @@ def get_paired_text_corrected(batch):
         with open(path_txt+filename,"r") as f:
             
                sentence=jiwer.RemoveKaldiNonWords()(f.read())   
-               sentences.append(sentence)
+               sentences.append(jiwer.RemoveMultipleSpaces()(sentence))
                #print(sentence)
                #print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentence))
                
                #sentences = ["is the world doomed or loved?", "edibles are allegedly cultivated"]
                #print(jiwer.SubstituteRegexes({r"t": r"ć"})(sentences))
-    print(sentences)
-    print(jiwer.SubstituteRegexes({r"{": r"š",r"`":r"ž",r"}":r"đ",r"~":r"č",r"#":r"dž"})(sentences))
+    #print(sentences)
+    #print(jiwer.SubstituteRegexes({r"{": r"š",r"`":r"ž",r"}":r"đ",r"~":r"č",r"#":r"dž"})(sentences))
+    sentences=jiwer.SubstituteRegexes({r"{": r"š",r"`":r"ž",r"}":r"đ",r"~":r"č",r"#":r"dž"})(sentences)
+    return sentences
 
    
                
@@ -97,4 +99,5 @@ txt_names = get_txt_list()
 curr_batch = select_batch(wav_names, BATCH_NO, BATCH_SIZE)
 curr_batch_txt=select_batch(txt_names, BATCH_NO, BATCH_SIZE)
 
-get_paired_text_corrected(curr_batch_txt)
+corrected_sentences=get_paired_text_corrected(curr_batch_txt)
+print(corrected_sentences)
