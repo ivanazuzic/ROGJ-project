@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import sys
-
 import speech_recognition as sr
 #dodala
 import jiwer
@@ -79,7 +78,8 @@ def get_paired_text_corrected(batch):
     for filename in batch:
         with open(path_txt+filename,"r") as f:
             
-               sentence=jiwer.RemoveKaldiNonWords()(f.read())   
+               sentence=jiwer.RemoveKaldiNonWords()(f.read())
+               sentence=sentence.replace("^","ć");
                sentences.append(jiwer.RemoveMultipleSpaces()(sentence))
                #print(sentence)
                #print(jiwer.SubstituteRegexes({r"^": r"ć"})(sentence))
@@ -91,13 +91,14 @@ def get_paired_text_corrected(batch):
     sentences=jiwer.SubstituteRegexes({r"{": r"š",r"`":r"ž",r"}":r"đ",r"~":r"č",r"#":r"dž"})(sentences)
     return sentences
 
-   
+
                
 wav_names = get_wav_list()
 txt_names = get_txt_list()
 
 curr_batch = select_batch(wav_names, BATCH_NO, BATCH_SIZE)
+#dohvati popis txt datoteka koje odgovaraju audio zapisima
 curr_batch_txt=select_batch(txt_names, BATCH_NO, BATCH_SIZE)
-
+#izfiltrirane rečenice
 corrected_sentences=get_paired_text_corrected(curr_batch_txt)
 print(corrected_sentences)
