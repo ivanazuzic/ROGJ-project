@@ -31,7 +31,7 @@ def display(mat):
     for row in mat:
         print(row)
 
-def get_steps(seq1, seq2, verbose=False):
+def get_steps(seq1, seq2, output_file="affected_words.txt", verbose=False):
     val, mat = levenshtein(seq1, seq2)
     rows = len(mat) 
     cols = len(mat[0]) 
@@ -42,44 +42,50 @@ def get_steps(seq1, seq2, verbose=False):
     deletions = 0
     insertions = 0
     correct = 0
-    
-    while r > 0 and c > 0:
-        diag = mat[r-1][c-1]
-        left = mat[r][c-1]
-        up = mat[r-1][c]
-        val = mat[r][c]
-        
-        if diag == min(left, min(up, diag)):
-            if (seq1[r-1]) == (seq2[c-1]):
+    with open(output_file, "a") as f:
+        while r > 0 and c > 0:
+            diag = mat[r-1][c-1]
+            left = mat[r][c-1]
+            up = mat[r-1][c]
+            val = mat[r][c]
+            
+            if diag == min(left, min(up, diag)):
+                if (seq1[r-1]) == (seq2[c-1]):
+                    if verbose:
+                        print("good", seq1[r-1], seq2[c-1])
+                    f.write(" ".join(["good", seq1[r-1], seq2[c-1]]) + '\n')
+                    correct += 1
+                else:
+                    if verbose:
+                        print("swap", seq1[r-1], seq2[c-1])
+                    f.write(" ".join(["swap", seq1[r-1], seq2[c-1]]) + '\n')
+                    substitutions += 1
+                r -= 1
+                c -= 1  
+            elif left == min(left, min(up, diag)):
                 if verbose:
-                    print("good", seq1[r-1], seq2[c-1])
-                correct += 1
-            else:
+                    print("insert", seq2[c-1])
+                f.write(" ".join(["insert", seq2[c-1]]) + '\n')
+                insertions += 1
+                c -= 1
+            elif up == min(left, min(up, diag)):
                 if verbose:
-                    print("swap", seq1[r-1], seq2[c-1])
-                substitutions += 1
-            r -= 1
-            c -= 1  
-        elif left == min(left, min(up, diag)):
+                    print("delete", seq1[r-1])
+                f.write(" ".join(["delete", seq1[r-1]]) + '\n')
+                deletions += 1
+                r -= 1  
+        while c > 0:
+            c = c - 1
             if verbose:
-                print("insert", seq2[c-1])
+                print("insert", seq2[c])
+            f.write(" ".join(["insert", seq2[c]]) + '\n')
             insertions += 1
-            c -= 1
-        elif up == min(left, min(up, diag)):
+        while r > 0:
+            r = r - 1
             if verbose:
-                print("delete", seq1[r-1])
+                print("delete", seq1[r])
+            f.write(" ".join(["delete", seq1[r]]) + '\n')
             deletions += 1
-            r -= 1  
-    while c > 0:
-        c = c - 1
-        if verbose:
-            print("insert", seq2[c])
-        insertions += 1
-    while r > 0:
-        r = r - 1
-        if verbose:
-            print("delete", seq1[r])
-        deletions += 1
     return (substitutions, deletions, insertions, correct) 
 
 def wer(S, D, I, C):

@@ -110,7 +110,7 @@ with open('statistics.csv', mode='w') as csv_file:
         seq1 = corrected_sentences[i].strip().split(" ")
         seq2 = predicted_sentences[i].strip().split(" ")
         jiwers_wer = word_error_rate[i]
-        S, D, In, C = distance.get_steps(seq2, seq1)
+        S, D, In, C = distance.get_steps(seq2, seq1, "affected_words.txt")
         N = S + D + In
         our_wer = distance.wer(S, D, In, C)
         writer.writerow([
