@@ -36,7 +36,7 @@ def get_txt_list():
             txt_name = row.split()[1]
             names_list.append(txt_name)
     return names_list
-# Selects a batch that we want to upload
+# Selects a batch that we want to work with
 def select_batch(names_list, batch_no, batch_size):
     b_start = (batch_no - 1) * batch_size
     b_end = (batch_no) * batch_size

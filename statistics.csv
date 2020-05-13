@@ -1,0 +1,105 @@
+Filename,Corrected sentence,Predicted sentence,WER from jiwer,Substitutions,Deletions,Insertions,Correct,N,Our WER
+sm04120703328.txt,voditelj projekta krešimir viduka,voditelj projekta krešimir viduka,0.0,0,0,0,4,0,0.0
+sm04120703279.txt,da će ga mnogi naraštaji studenata pamtiti kao vrsnog pedagoga i profesora,ga mnogi naraštaj studenata pamtiti kao mrsno pedagoga i profesor,0.5,3,0,2,7,5,0.5
+sm04161204427.txt,među glavnim optuženicima su jedan alžirac i jedan francuz,među glavnim optuženima su jedan azira tjedan francuzi,0.625,4,0,1,4,5,0.625
+sm04140703223.txt,bomba je bila podmetnuta u podrumu zgrade parlamenta,bi bila podmetnuta u podrumu zgrade parlamenta,0.2857142857142857,1,0,1,6,2,0.2857142857142857
+sm04300104117.txt,najvećim dijelom prebrodila materijalne posljedice rata,najveće dijelom prebrodila materijalne posledice rata,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04300104130.txt,nezavisni sindikat zaposlenih u riječkoj luci danas je konferencijom za novinstvo obilježio šest godina,nezavisni sindikat zaposlenih u riječ koju ruci danas je konferencija za novinare obilježja šest godina,0.4,5,1,0,9,6,0.4
+sm04070105155.txt,samouprave,unknownvalueerror,1.0,1,0,0,0,1,1.0
+sm04310105117.txt,kina je razmjestila sedamsto šest raketa na svojoj jugoistočnoj obali ,kine razmislila 706 raketa na svojoj jugoistočnoj obali,0.625,3,0,2,5,5,0.625
+sm04140105133.txt,ali,unknownvalueerror,1.0,1,0,0,0,1,1.0
+sm04060105426.txt,rekao je premijer,pripremi,3.0,1,0,2,0,3,3.0
+sm04170105336.txt,među gotovo pet tisuća uzvanika su francuski predsjednik žak širak i britanski premijer toni bler,yugo 5.000 nika su francuski predsednik žak širak i britanski premijer tony blair,0.6153846153846154,6,0,2,7,8,0.6153846153846154
+sm04140105139.txt,planira njezino ubojstvo,mira njezino ubojstvo,0.3333333333333333,1,0,0,2,1,0.3333333333333333
+sm04010105350.txt, tome treba dodati i pomoć vlade od četrdeset šest milijuna dolara,to mi treba dodati pomoć vlade od 46 miliona dolara,0.6,3,1,2,6,6,0.6
+sm04140105239.txt,biometeorološki će utjecaj biti vrlo povoljan,biometeorološke će utjecaj biti vrlo nepovoljan,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04170105310.txt,predsjedniku mesiću na ponovnom je izboru čestitao i britanski ministar za europu denis mekšejn,predsjednik u mesiću naponom je izboru čestitao i britanski ministar za evropu denis mekše,0.42857142857142855,6,0,0,8,6,0.42857142857142855
+sm04120703152.txt, ilok jedan dva četiri sto dvadeset četiri,12 424,3.5,2,0,5,0,7,3.5
+sm04111204150.txt,tri dva devet tristo dvadeset devet slavonski brod tri nula šest,329 329 slavonski brod 306,1.8,3,0,6,2,9,1.8
+sm04070105166.txt,za predsjedničke izbore,za predsedničke izbore,0.3333333333333333,1,0,0,2,1,0.3333333333333333
+sm04251202305.txt,u subotu i nedjelju većinom oblačno i osjetno toplije povremeno s kišom zapuhat će mjestimice umjeren jugozapadnjak,u subotu i nedelju većinom oblačno i još jedno toplije povremeno s kišom za puhati mjeseca umirem jugozapadne,0.4444444444444444,7,1,0,10,8,0.4444444444444444
+sm04140602305.txt,i prognoza za slijedećih dvanaest sati sunčano tiho ili burin danju slab maestral ,i prognoza za sljedećih 12 sati sunčano tiho ili burim danju slab mestral,0.3076923076923077,4,0,0,9,4,0.3076923076923077
+sm04300104162.txt,u kojemu svake godine prezimi oko pedeset tisuća ptica,u kojemu svake godine prezimi oko 50.000 petica,0.375,2,0,1,6,3,0.375
+sm04170105202.txt,no elektronički mediji na hrvatskom jeziku u hercegovini ističu predsjednikovu izjavu,elektronički mediji na hrvatskom jeziku u hercegovini ističu predsjednika u izjavu,0.2727272727272727,1,1,1,9,3,0.2727272727272727
+sm04070105203.txt,manje poteškoće zbog visokih temperatura zraka za ovo doba godine mogu imati samo iznimno osjetljivi ljudi,manji poteškoće zbog visokih temperatura zraka za ovo doba godine mogu imati samo iznimno osjeti ljudi,0.125,2,0,0,14,2,0.125
+sm04270402312.txt,i prognoza za slijedećih dvanaest sati,i prognoza za sljedećih 12 sati,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04171204135.txt,vukovar sedam šest sedamdeset šest ilok jedan tri dva sto trideset dva,vukovar 76 76 ilok 132 132,1.6666666666666667,4,0,6,2,10,1.6666666666666667
+sm04060105408.txt,budući da je bilo raznih nagađanja o cijeni zahvata i načinu plaćanja,budući da je bilo raznih nagađanja o cijeni zahvata i načinu plaćanja,0.0,0,0,0,12,0,0.0
+sm04140703327.txt,hrvatske lječničke komore hrvoje minigo,gradske komore hrvoje minigo,0.5,1,0,1,3,2,0.5
+sm04090402409.txt,i prognoza za slijedećih dvanaest sati,i prognoza za sljedećih 12 sati,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04170105332.txt,bit će sutra domaćin političke elite,biće sutra domaćin političke elite,0.4,1,0,1,4,2,0.4
+sm04250502305.txt,i prognoza za slijedećih dvanaest sati slab jugozapadni vjetar i jugo more malo valovito,i prognoza za sljedećih 12 sati slab jugozapadni vjetar i yugo more malo i to,0.3333333333333333,4,1,0,10,5,0.3333333333333333
+sm04060105501.txt,ili su zbog rata prestale postojati,isus bog rata prestani postojati,0.8,3,0,1,2,4,0.8
+sm04120703117.txt,razgledao je spomen sobu dubrovačkih branitelja,razgledao je spomen sobu dubrovačkih branitelja,0.0,0,0,0,6,0,0.0
+sm04070105114.txt,idućih osam godina,idućih osam godina,0.0,0,0,0,3,0,0.0
+sm04111204143.txt,ilok jedan sedam nula sto sedamdeset,ilok 170 170,1.6666666666666667,2,0,3,1,5,1.6666666666666667
+sm04020204342.txt,na sjednici je bio i predsjednik stjepan mesić koji je podsjetio na slavnu prošlost dubrovnika i nekadašnje dubrovačke republike,sjednica je bio i predsjednik stjepan mesić koje posjetio ona slavnu prošlost dubrovnika i nekadašnje dubrovačke republike,0.35294117647058826,4,0,2,13,6,0.35294117647058826
+sm04120703202.txt,vozi se u kolonama bez zastoja,vozi se u kolonama bez zastoja,0.0,0,0,0,6,0,0.0
+sm04140105127.txt,u kojima su razmješteni vojnici,u kojima su razmišljali vojnici,0.2,1,0,0,4,1,0.2
+sm04060105494.txt,u sjeveroistočnoj pokrajini,sjever istočno pokreni,1.0,3,0,0,0,3,1.0
+sm04140105233.txt,neprestance potvrđuju donacije,prestani se potvrđuju dodaci,0.75,2,1,0,1,3,0.75
+sm04140703337.txt,na kliničkim ispitivanjima lijekova,ispitivanje na lijekova,1.0,2,0,1,1,3,1.0
+sm04140105215.txt,istodobno su pozvale vladu u beogradu,odavno se upoznali vladu u beogradu,0.5,3,0,0,3,3,0.5
+sm04010105140.txt, u nekim se gradovima nisu niti održale velike novogodišnje proslave,u nekim sa gradovima nisu niti održale velike novogodišnje proslave,0.1,1,0,0,9,1,0.1
+sm04170105352.txt,ožujak,može,1.0,1,0,0,0,1,1.0
+sm04171204138.txt,sava zagreb minus dva jedan sedam minus dvjesto sedamnaest crnac minus jedan šest minus šesnaest,sava zagreb minus 217 - 217 crnac minus 1.6 16,1.0,5,0,5,5,10,1.0
+sm04060105402.txt,koji su mu ispravno postavili dijagnozu rijetke lokacije malignoma,mu ispravno postaviti dijagnozu rijetke lokacije malignom,0.5714285714285714,2,0,2,5,4,0.5714285714285714
+sm04300104154.txt,vlasti u hong kongu zatvorile su sve prostore,vlasti u hong kongu zatvorile su sve prostore,0.0,0,0,0,8,0,0.0
+sm04310105305.txt,inače talijanska tvrtka gradi pet tisuća sedamsto šezdeset metara dugi tunel mala kapela a budući da je njegova izgradnja pri kraju upravo danas većina njihovih djelatnika ,inače italijanska tvrtka gradi 5760 m dugi tunel mala kapela a budući da je njegova izgradnja pri kraju upravo danas većina njihovih djelatnika,0.2608695652173913,3,0,3,20,6,0.2608695652173913
+sm04111204105.txt,vrijeme poslijepodne na jadranu i u višem gorju sunčano a u ostalim krajevima oblačno,vrijeme poslijepodne na jadranu i u višem gori sunčano a u ostalim krajevima oblačno,0.07142857142857142,1,0,0,13,1,0.07142857142857142
+sm04050204451.txt,prosvjednici su se odazvali na poziv nacionalnog sindikata novinara,protivnici su se odazvali na poziv nacionalnog sindikata novinara,0.1111111111111111,1,0,0,8,1,0.1111111111111111
+sm04170105133.txt,drava botovo dva terezino polje minus tri nula pet minus tristo pet donji miholjac minus pet jedan minus pedeset jedan osijek minus sedam tri minus sedamdeset tri,prava botovo 2 terezino polje minus 30 5 - 305 donji miholjac mi - 51 - 51 osijek minus 73 - 73,0.8636363636363636,14,0,5,8,19,0.8636363636363636
+sm04130203102.txt,"vjetar slab do umjeren sjeveroistočni na jadranu pretežito sunčano uz umjerenu i jaku na udare ponegdje i olujnu buru
+",vjetar slab da umirem severoistočni na jadranu pretežno sunčano uz umjereno i ja kuna udare po negdje i olujno boru,0.55,10,1,0,9,11,0.55
+sm04120703277.txt,prijatelja i kolega stoji u brzojavu,prijatelja i kolege stoji u brzojav,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04111204144.txt,drava botovo sedam osam sedamdeset osam,brala botovo 78 78,1.25,3,0,2,1,5,1.25
+sm04010105124.txt, ali su se proslave i vatrometi ipak organizirali gotovo u cijelom svijetu,isuse proslave i vatrometi ipak organizira li gotovo u cijelom svijetu,0.45454545454545453,2,1,2,8,5,0.45454545454545453
+sm04120703237.txt,i nisu baš velike,i nisu baš velike,0.0,0,0,0,4,0,0.0
+sm04171204111.txt,osim na zagrebačkom području zbog ledene kiše sa snijegom sklisko je i na krapinsko zagorskom području,osim na zagrebačkom području zbog ledene kiše sa snijegom sklisko i na krapinsko zagorsko području,0.13333333333333333,1,0,1,14,2,0.13333333333333333
+sm04300104223.txt,rekao je novinarima da će se naknadno odrediti,rekao je novinarima da će se naknadno odrediti,0.0,0,0,0,8,0,0.0
+sm04120703241.txt,sedam posto ispitanika je odgovorilo,7% ispitanika je odgovorila,0.75,2,0,1,2,3,0.75
+sm04111204133.txt,turski premijer redžep erdogan zauzimao se,premijer redžep erdogan zauzima ose,0.6,2,0,1,3,3,0.6
+sm04101204418.txt, a obuhvaćao je između ostaloga,obuhvaćen je između ostalog,0.75,2,0,1,2,3,0.75
+sm04050204463.txt,kojemu će morati isplatiti jednu kunu naknade,kojemu će morati isplatiti jednu kunu naknade,0.0,0,0,0,7,0,0.0
+sm04161204438.txt,priopćeno je iz geofizičkog zavoda biometeorološka prognoza za sutra,prijatno iz fizičkog zavoda biometeorološka prognoza za sutra,0.375,2,0,1,6,3,0.375
+sm04251202301.txt,vremenska prognoza za sutra djelomice sunčano više oblaka u dalmaciji gdje mjestimice može pasti i malo kiše,vremenska prognoza za sutra delnice sunčano više oblaka u dalmaciji gdje je mesnica može pasti malo kiše,0.23529411764705882,2,1,1,14,4,0.23529411764705882
+sm04170105152.txt,dodjeljeni su zlatni globusi za televizijske serije tako su očajne kućanice,dodeljeni su zlatni globus i za televizijske serije tako su očajne kućanice,0.25,2,1,0,9,3,0.25
+sm04050204450.txt,javnoj radioteleviziji koja je oštro napadnuta u zaključku istrage suca istražitelja brajana hakna,javni radio televiziji koja je oštro napadnuta u zaključku istrage sutra istražitelja brajana hana,0.35714285714285715,4,1,0,9,5,0.35714285714285715
+sm04310105220.txt,more malo do umjereno valovito ponegdje na otvorenom krajnjeg dijela južnog jadrana valovito postupno naoblačenje i malo toplije zatim ponegdje slaba kiša,more malo da umirem valovito po negdje na otvorenom krajnje i bijela južnog jadrana valovito postupno na ovlašćenje i malo toplije zatim policije slaba kiša,0.4,7,3,0,15,10,0.4
+sm04060105521.txt,i dijelu srednjega,ide u sve njega,1.0,3,1,0,0,4,1.0
+sm04140105137.txt,početkom tjedna sudski su dužnosnici objavili da radikalna muslimanska skupina,tjedna sudski su dužnosti objavili da radikalna muslimanska skupi,0.3333333333333333,2,0,1,7,3,0.3333333333333333
+sm04070105106.txt,održavanja i keteringa,održavanje i ketering,0.6666666666666666,2,0,0,1,2,0.6666666666666666
+sm04300104127.txt,vlado puljiz predsjednik znanstvenog savjeta centra za demokraciju i pravo miko tripalo,puljiz predsjednik zdravstvenog saveta centar za demokratiju i pravo miko tripalo,0.45454545454545453,4,0,1,7,5,0.45454545454545453
+sm04300104329.txt,u registru se mogu naći svi podaci o tvrtkama i djelatnostima kao i kontakt osobe adrese i financijski podaci,u registru se mogu naći svi podaci o tvrtka ma i delatnostima kao i kontakt osobe adrese i finansijski podaci,0.2,3,1,0,16,4,0.2
+sm04170105153.txt,najbolja komična serija a nip tak najbolja dramska serija,najbolja komična serija ni tak najbolja dramska serija,0.25,1,0,1,7,2,0.25
+sm04120703271.txt,pri udaru je ispala iz automobila i poginula a njezin suputnik mario prkomet,daruje ispala iz automobila i poginula a njezin su putnik mario prgomet,0.5,3,1,2,8,6,0.5
+sm04170105343.txt,te bolova na mjestima ranijih prijeloma,bolova na mjestima ranijih prijelom,0.4,1,0,1,4,2,0.4
+sm04300104110.txt,vrijeme poslijepodne uglavnom sunčano na južnom jadranu umjerena naoblaka,prijepodne uglavnom sunčano na južnom jadranu mirana oblaka,0.5,3,0,1,5,4,0.5
+sm04140703356.txt, more malo do umjereno valovito,malo domijan valovito,1.0,1,0,2,2,3,1.0
+sm04020204213.txt,službeno je hrvatsko stajalište bilo da u tome nema pregovora,službeno i hrvatsko stajalište bilo da u tome nema pregovora,0.1,1,0,0,9,1,0.1
+sm04111204141.txt,današnji izvještaj o vodostaju rijeka,današnji izveštaj o vodostaju rijeka,0.2,1,0,0,4,1,0.2
+sm04020204347.txt," tijekom noći i jutra na sjevernome i dijelu srednjega jadrana vidljivost ponegdje manja od jednog kilometra zbog kratkotrajne magle
+",tijekom noći i jutra na sjevernom dijelu srednjega jadrana vidljivost pa negdje manje od jednog kilometara zbog kratkotrajne magle,0.3157894736842105,4,1,1,14,6,0.3157894736842105
+sm04310105113.txt,iz iraka je vijest da je petnaest britanskih vojnika poginulo sinoć u padu vojnog transportnog zrakoplova nedaleko od bagdada ,iz iraka i vijest da je 15 britanskih vojnika poginulo sinoć u padu vojnog transportnog zrakoplova na telefon bagdada,0.21052631578947367,4,0,0,15,4,0.21052631578947367
+sm04080204437.txt,pa će se većina osjećati bolje osobito oni s niskim tlakom,hoće se većina osjećati bolje osobito onih s niskim plakom,0.4,3,0,1,7,4,0.4
+sm04080204426.txt,također u sklopu nastojanja za smanjenjem onečišćenja,također u sklopu nastojanja za smanjenjem onečišćenja,0.0,0,0,0,7,0,0.0
+sm04070105213.txt,izgredi su se dogodili tijekom posjeta američkoga demokratskog kandidata na prošlim predsjedničkim izborima džona kerija,izradi su se dogodili tijekom posjeta američkog demokratsko kandidata na prošlim predsedničkim izborima džona ker,0.3333333333333333,5,0,0,10,5,0.3333333333333333
+sm04140105203.txt,od početka akcije u iraku u ožujku dvije tisuće treće,početka akcije u iraku u ožujku 2003,0.5714285714285714,1,0,3,6,4,0.5714285714285714
+sm04120703330.txt,koordinator aemvebea,koordinator am web,0.6666666666666666,1,1,0,1,2,0.6666666666666666
+sm04300104333.txt,na četrdeset svjetskih jezika među kojima je i na hrvatskom,40 svjetskih jezika među kojima i na hrvatskom,0.375,1,0,2,7,3,0.375
+sm04060105434.txt,ozbiljno ćemo to razmotriti i zakonski imamo vremena do svibnja donijeti odluku za buduću školsku godinu rekao je sanader,ozbiljno ćemo te razmotriti i zakonski imamo vremena do svibnja donijeti odluku za buduću školsku godinu rekao i senad,0.15789473684210525,3,0,0,16,3,0.15789473684210525
+sm04261204101.txt,nešto manje od dvije tisuće ljudi poginulo je u jutrošnjim jakim potresima u južnoj aziji,to manje od 2.000 ljudi poginulo je ujutro s njim jakim potres ima u južnoj aziji,0.5,5,2,1,9,8,0.5
+sm04170105318.txt,slovenski predsjednik janez drnovšek,slovenski predsjednik janez drnovšek,0.0,0,0,0,4,0,0.0
+sm04080402403.txt, prostrana dolina širi se sa zapada i jugozapada preko ligurskog i tirenskog mora prema jadranu gdje slabi polje povišenog tlaka,društvena dolina širi se sa zapada jugozapadu preko lirskog i tirenskog mora prema jadranu je slabiji polje povišenog tlaka,0.3157894736842105,5,0,1,14,6,0.3157894736842105
+sm04140105123.txt,dodajmo da je američka vojska udvostručila broj helikoptera,da odemo da je američka vojska udvostruči lebron helikopter,0.5555555555555556,4,1,0,4,5,0.5555555555555556
+sm04120703229.txt,ističući,ističući,0.0,0,0,0,1,0,0.0
+sm04080402406.txt,drugdje jugo i istočnjak tijekom noći i sutra pojačat će se na dvanaest do dvadeset i četiri čvora,druge jugoistočna tijekom noći sutra pojačajte sve na 12 do 24 čvora,1.0,6,0,6,6,12,1.0
+sm04101204484.txt,da je tim dokumentom utvrđeno sedamnaest glavnih područja zaštite ljudskih prava,letim dokumentom utvrđeno 17 glavnih područja zaštite ljudskih prava,0.4444444444444444,2,0,2,7,4,0.4444444444444444
+sm04270402106.txt,"donji miholjac jedan nula deset
+",donji miholjac 10 10,0.75,2,0,1,2,3,0.75
+sm04120703368.txt,"tada je viljam oranjski porazio svrgnutog katoličkog kralja džejmsa drugog
+",javljam oranski porazio otvorimo tog katoličko kralja džejmsa drugog,0.7777777777777778,6,0,1,3,7,0.7777777777777778
+sm04241204420.txt,od cijena autocesta do struje i plina,cijena autocesta do struje i plina,0.16666666666666666,0,0,1,6,1,0.16666666666666666
+sm04070105140.txt,dvjesto osamdeset osam osoba,288 osoba,1.5,1,0,2,1,3,1.5
+sm04010105129.txt, zemlje članice europske unije odlučile su,zemlje članice evropske unije odlučili su,0.3333333333333333,2,0,0,4,2,0.3333333333333333
+sm04270402103.txt,botovo,gotovo,1.0,1,0,0,0,1,1.0
