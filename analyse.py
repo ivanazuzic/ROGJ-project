@@ -13,10 +13,11 @@ if no_args >= 2:
 else:
     BATCH_NO = 1 
 
-BATCH_SIZE = 100
+BATCH_SIZE = 2328
 
+path_wav = "../VEPRAD/Wav/"
 path_txt = "../VEPRAD/Txt/"
-path_output = "../GoogleOutput/"
+path_output = "../GoogleOutput2/"
 
 #Load the names of paired txt files
 def get_txt_list():
@@ -48,9 +49,12 @@ def extract_contents(path, names):
     sentences = list()
     for filename in names:
         file_to_open = path + "GoogleOutput.".join(filename.split("."))
-        with open(file_to_open, "r") as f:
-            sentence = f.read()
-            sentences.append(jiwer.RemoveMultipleSpaces()(sentence))
+        try:
+            with open(file_to_open, "r") as f:
+                sentence = f.read()
+                sentences.append(jiwer.RemoveMultipleSpaces()(sentence))
+        except:
+            sentences.append("unknownvalueerror")
     return sentences
 
 def put_to_lowercase(sentences):
@@ -62,11 +66,16 @@ def put_to_lowercase(sentences):
 def analyse_wer(corrected_sentences, predicted_sentences):
     with open("wer_data.txt", "w") as f:
         word_error_rate = list()
+        match_error_rate = list()
+        word_info_lost = list()
         for i in range(len(corrected_sentences)):
-            word_error_rate.append(jiwer.wer(predicted_sentences[i], corrected_sentences[i]))
+            all_measures = jiwer.compute_measures(predicted_sentences[i], corrected_sentences[i])
+            word_error_rate.append(all_measures["wer"])
+            match_error_rate.append(all_measures['mer'])
+            word_info_lost.append(all_measures['wil'])
             f.write(str(word_error_rate[-1]))
             #print(word_error_rate[-1])
-    return word_error_rate
+    return (word_error_rate, match_error_rate, word_info_lost)
 
 txt_names = get_txt_list()
 
@@ -85,8 +94,8 @@ predicted_sentences = put_to_lowercase(predicted_sentences)
 #print(corrected_sentences)
 #print(predicted_sentences)
 
-# Analysing WER
-word_error_rate = analyse_wer(corrected_sentences, predicted_sentences)
+# Analysing WER(word error rate), MER (match error rate) and WIL (word information lost)
+word_error_rate, match_error_rate, word_info_lost = analyse_wer(corrected_sentences, predicted_sentences)
 
 avg_wer = sum(word_error_rate)/len(word_error_rate)
 print("Average WER:", avg_wer)
@@ -103,7 +112,9 @@ with open('statistics.csv', mode='w') as csv_file:
         "Insertions", 
         "Correct", 
         "N", 
-        "Our WER"
+        "Our WER",
+        "MER from jiwer",
+        "WIL from jiwer"
     ])
     for i in range(len(word_error_rate)):
         filename = txt_names[i]
@@ -111,8 +122,10 @@ with open('statistics.csv', mode='w') as csv_file:
         seq2 = predicted_sentences[i].strip().split(" ")
         jiwers_wer = word_error_rate[i]
         S, D, In, C = distance.get_steps(seq2, seq1, "affected_words.txt")
-        N = S + D + In
+        N = S + D + C
         our_wer = distance.wer(S, D, In, C)
+        jiwers_mer = match_error_rate[i]
+        jiwers_wil = word_info_lost[i]
         writer.writerow([
             filename,
             corrected_sentences[i],
@@ -123,5 +136,7 @@ with open('statistics.csv', mode='w') as csv_file:
             In,
             C,
             N,
-            our_wer
+            our_wer,
+            jiwers_mer,
+            jiwers_wil
         ])
