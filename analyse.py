@@ -63,17 +63,14 @@ def put_to_lowercase(sentences):
     return ret
     
 def analyse_wer(corrected_sentences, predicted_sentences):
-    with open("wer_data.txt", "w") as f:
-        word_error_rate = list()
-        match_error_rate = list()
-        word_info_lost = list()
-        for i in range(len(corrected_sentences)):
-            all_measures = jiwer.compute_measures(predicted_sentences[i], corrected_sentences[i])
-            word_error_rate.append(all_measures["wer"])
-            match_error_rate.append(all_measures['mer'])
-            word_info_lost.append(all_measures['wil'])
-            f.write(str(word_error_rate[-1]))
-            #print(word_error_rate[-1])
+    word_error_rate = list()
+    match_error_rate = list()
+    word_info_lost = list()
+    for i in range(len(corrected_sentences)):
+        all_measures = jiwer.compute_measures(predicted_sentences[i], corrected_sentences[i])
+        word_error_rate.append(all_measures["wer"])
+        match_error_rate.append(all_measures['mer'])
+        word_info_lost.append(all_measures['wil'])
     return (word_error_rate, match_error_rate, word_info_lost)
 
 ## If file exists, delete it ##
