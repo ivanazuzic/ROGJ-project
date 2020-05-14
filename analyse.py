@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
 import sys
-import speech_recognition as sr
 import jiwer
 import distance
 import csv
-
+import os
 
 no_args = len(sys.argv)
 if no_args >= 2:
@@ -76,6 +75,10 @@ def analyse_wer(corrected_sentences, predicted_sentences):
             f.write(str(word_error_rate[-1]))
             #print(word_error_rate[-1])
     return (word_error_rate, match_error_rate, word_info_lost)
+
+## If file exists, delete it ##
+if os.path.isfile("affected_words.txt"):
+    os.remove("affected_words.txt")
 
 txt_names = get_txt_list()
 
