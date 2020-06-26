@@ -4,13 +4,15 @@ import operator
 # Read the dataframe
 df = pd.read_csv('statistics.csv')  
 # Same values, excluding the values for unrecognised files
-df_filtered = df.loc[df['Predicted sentence'] == "unknownvalueerror"]
+df_filtered = df.loc[df['Predicted sentence'] != "unknownvalueerror"]
 
 # WER calculation
 #~~~~~~~~~~~~~~~~~~~
 print("\n" + "~" * 30) 
 print("WER calculation")
 print("~" * 30)
+
+#mean cijelog stupca
 WER_mean = df["WER from jiwer"].mean()
 print("Mean WER:", WER_mean)
 
@@ -47,9 +49,41 @@ print("~" * 30) #end of section
 
 # MER calculation
 #~~~~~~~~~~~~~~~~~~~
+print("\n" + "~" * 30) 
+print("MER calculation")
+print("~" * 30) 
+
 MER_mean = df["MER from jiwer"].mean()
 print("Mean MER:", MER_mean)
 
+# Get rows with maximum WER
+print("Maximum MER")
+max_MER_rows = df.loc[df["MER from jiwer"].idxmax()]
+print("Correct: ", max_MER_rows["Corrected sentence"], " Predicted: ", max_MER_rows["Predicted sentence"])
+
+# Get rows with minimum WER
+print("Minimum MER")
+min_MER_rows = df.loc[df["MER from jiwer"].idxmin()]
+print("Correct: ", min_MER_rows["Corrected sentence"], " Predicted: ", min_MER_rows["Predicted sentence"])
+
+
+# MER calculation without the unrecognised files
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print("\n" + "~" * 30) 
+print("MER calculation without the unrecognised files")
+print("~" * 30) 
+MER_mean = df_filtered["MER from jiwer"].mean()
+print("MeanMER:", MER_mean)
+
+# Get rows with maximum WER
+print("Maximum MER")
+max_MER_rows = df_filtered.loc[df_filtered['MER from jiwer'].idxmax()]
+print("Correct: ", max_MER_rows["Corrected sentence"], " Predicted: ", max_MER_rows["Predicted sentence"])
+
+# Get rows with minimum WER
+print("Minimum WER")
+min_MER_rows = df_filtered.loc[df_filtered['MER from jiwer'].idxmin()]
+print("Correct: ", min_MER_rows["Corrected sentence"], " Predicted: ", min_MER_rows["Predicted sentence"])
 # TODO: find rows with maximum and minimum MER
 
 print("~" * 30) #end of section
@@ -57,9 +91,41 @@ print("~" * 30) #end of section
 
 # WIL calculation
 #~~~~~~~~~~~~~~~~~~~
+print("\n" + "~" * 30) 
+print("WIL calculation")
+print("~" * 30) 
+
 WIL_mean = df["WIL from jiwer"].mean()
 print("Mean WIL:", WIL_mean)
 
+
+# Get rows with maximum WILL
+print("Maximum WIL")
+max_WIL_rows = df.loc[df["WIL from jiwer"].idxmax()]
+print("Correct: ", max_WIL_rows["Corrected sentence"], " Predicted: ", max_WIL_rows["Predicted sentence"])
+
+# Get rows with minimum WILL
+print("Minimum WIL")
+min_WIL_rows = df.loc[df["WIL from jiwer"].idxmin()]
+print("Correct: ", min_WIL_rows["Corrected sentence"], " Predicted: ", min_WIL_rows["Predicted sentence"])
+
+# WILL calculation without the unrecognised files
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print("\n" + "~" * 30) 
+print("WILL calculation without the unrecognised files")
+print("~" * 30) 
+WIL_mean = df_filtered["WIL from jiwer"].mean()
+print("MeanWIL:", WIL_mean)
+
+# Get rows with maximum WILL
+print("Maximum WIL")
+max_WIL_rows = df_filtered.loc[df_filtered['WIL from jiwer'].idxmax()]
+print("Correct: ", max_WIL_rows["Corrected sentence"], " Predicted: ", max_WIL_rows["Predicted sentence"])
+
+# Get rows with minimum WILL
+print("Minimum WIL")
+min_WIL_rows = df_filtered.loc[df_filtered['WIL from jiwer'].idxmin()]
+print("Correct: ", min_WIL_rows["Corrected sentence"], " Predicted: ", min_WIL_rows["Predicted sentence"])
 # TODO: find rows with maximum and minimum WIL
 
 print("~" * 30) #end of section
